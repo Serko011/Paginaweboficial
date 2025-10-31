@@ -1,0 +1,339 @@
+/* ==================== RESET ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ==================== TOPBAR ==================== */
+.topbar {
+  background: #ff85a2;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 0.9rem;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+  background: #ffb6c1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: #fff0f5;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* ==================== HERO ==================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 10%;
+  background: linear-gradient(to bottom right, #ffe4ec, #fff0f5);
+  min-height: 80vh;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background: #ff85a2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.1);
+}
+
+.illustration img {
+  width: 300px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ==================== TIMELINE ==================== */
+.timeline {
+  text-align: center;
+  padding: 60px 10%;
+  background: #fff;
+}
+
+.timeline h2 {
+  margin-bottom: 30px;
+  color: #ff4d79;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.timeline-item {
+  background: #ffe6eb;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.timeline-item:hover {
+  transform: scale(1.03);
+}
+
+/* ==================== MOMENTOS ==================== */
+.momentos {
+  padding: 60px 10%;
+  background: #fff0f5;
+  text-align: center;
+}
+
+.momentos h2 {
+  color: #ff4d79;
+  margin-bottom: 30px;
+}
+
+.momentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* ==================== CARTA ==================== */
+.carta {
+  padding: 60px 10%;
+  text-align: center;
+  background: #fff;
+}
+
+.letter-box {
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#btnCarta {
+  margin-top: 15px;
+  background: #ff85a2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ==================== GALERÍA ==================== */
+.galeria {
+  padding: 60px 10%;
+  text-align: center;
+  background: #fff0f5;
+}
+
+.galeria-slider {
+  display: flex;
+  overflow-x: scroll;
+  gap: 15px;
+}
+
+.galeria-slider img {
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.galeria-slider img:hover {
+  transform: scale(1.1);
+}
+
+/* ==================== MODO OSCURO ==================== */
+.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+
+.dark-mode .navbar {
+  background: #222;
+}
+
+.dark-mode .momentos, .dark-mode .galeria, .dark-mode .timeline {
+  background: #1a1a1a;
+}
+
+/* ==================== OTROS ==================== */
+footer {
+  background: #ffb6c1;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+@keyframes float {
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #ffb6c1;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* --- Secciones bloqueadas --- */
+.bloqueada {
+  display: none;
+}
+
+/* --- Juegos --- */
+.juego {
+  text-align: center;
+  padding: 50px 10%;
+  background: #fff0f5;
+}
+
+.juego input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ff85a2;
+  margin-right: 10px;
+}
+
+.juego button {
+  background: #ff85a2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.memoria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.memoria-card {
+  background: white;
+  border: 1px solid #ff85a2;
+  border-radius: 8px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* --- Juego corazones --- */
+#corazonesArea {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: #ffe6eb;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  font-size: 30px;
+  cursor: pointer;
+  animation: float 4s linear infinite;
+}

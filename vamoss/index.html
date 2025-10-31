@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Ti 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- 🌹 Encabezado superior -->
+  <header class="topbar">
+    <p>💌 Hecho con amor, solo para ti</p>
+  </header>
+
+  <!-- 💕 Menú principal -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="img/1.png" alt="Logo Amor">
+    </div>
+    <ul class="nav-links">
+      <li><a class="active" href="#inicio">Inicio</a></li>
+      <li><a href="#historia" class="locked">Nuestra Historia 🔒</a></li>
+      <li><a href="#momentos" class="locked">Momentos 🔒</a></li>
+      <li><a href="#carta" class="locked">Carta para Ti 🔒</a></li>
+      <li><a href="#galeria" class="locked">Galería 🔒</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </nav>
+
+  <!-- 🌠 Sección Inicio -->
+  <section id="inicio" class="hero">
+    <div class="content">
+      <h1>Bienvenida a Nuestro Rincón 💖</h1>
+      <p>Aquí comienza un pequeño viaje lleno de juegos, recuerdos y sorpresas.  
+      Supera los desafíos y ve desbloqueando los capítulos de nuestra historia 💫</p>
+      <button id="btnJuego1">🎮 Jugar Primer Desafío</button>
+    </div>
+    <div class="illustration">
+      <img src="img/3.png" alt="Pareja">
+    </div>
+  </section>
+
+  <!-- 🎯 JUEGO 1 -->
+  <section id="juego1" class="juego">
+    <h2>🎮 Desafío 1: Adivina</h2>
+    <p>¿Recuerdas en qué mes nos conocimos? ❤️</p>
+    <input type="text" id="respuesta1" placeholder="Escribe aquí...">
+    <button id="comprobar1">Comprobar</button>
+    <p id="resultado1"></p>
+  </section>
+
+  <!-- 🕰️ Nuestra historia -->
+  <section id="historia" class="timeline bloqueada">
+    <h2>Nuestra Historia</h2>
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <h3>💫 Cuando nos conocimos?</h3>
+        <p>Te conocí el 8 de diciembre de 2022.
+Ese día me hablaste por algo tan simple como Free Fire, pero sin saberlo, comenzábamos algo mucho más especial.
+Desde entonces no dejamos de hablar, y poco a poco nuestras conversaciones se fueron llenando de risas, confianza y cariño.
+
+Hasta que, en uno de esos viajes un poco locos, nos encontramos en Madrid.
+Y ahí estabas tú tan única, con esa forma tuya de cambiar de un segundo a otro, de sorprender, de hacer que todo gire a tu alrededor.
+
+Ese día me di cuenta de que era como si te conociera de toda la vida. Había una conexión real, una confianza natural… aunque al principio fueses un poco tímida, yo ya sabía que detrás de eso estabas tú, la bestia ecuatoriana.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>🌸 Nuestro primer viaje</h3>
+        <p>Aún no hemos hecho ese viaje juntos… pero no dejo de imaginarlo.
+Ir contigo a cualquier lugar sería una aventura perfecta, porque sé que donde estemos tú y yo, ya será mi sitio favorito.
+Y ojalá pronto podamos perdernos juntos, hasta el infinito y más allá.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>💍 El mejor día</h3>
+        <p>Fue el día de tu cumpleaños, cuando me di cuenta de algo más profundo.
+Ese día entendí que eras una mujer única, diferente a todas, alguien que realmente vale la pena.
+Desde entonces, cada momento contigo se siente como un regalo, y cada día te extraño mas. </p>
+      </div>
+    </div>
+
+    <!-- Botón para pasar al siguiente juego -->
+    <button id="btnJuego2">Siguiente Desafío 💘</button>
+  </section>
+
+  <!-- 🎯 JUEGO 2 -->
+  <section id="juego2" class="juego bloqueada">
+    <h2>🎯 Desafío 2: Memoria</h2>
+    <p>Aquí va un pequeño juego de memoria visual. Encuentra los dos corazones iguales 💖</p>
+    <div class="memoria-grid" id="memoriaGrid"></div>
+    <p id="resultado2"></p>
+  </section>
+
+  <!-- 📸 Momentos -->
+  <section id="momentos" class="momentos bloqueada">
+    <h2>Momentos que Atesoramos</h2>
+    <div class="momentos-grid">
+      <div class="card"><img src="img/foto1.jpg" alt=""><p>Tu sonrisa 💕</p></div>
+      <div class="card"><img src="img/foto2.jpg" alt=""><p>Nuestro viaje ✈️</p></div>
+      <div class="card"><img src="img/foto3.jpg" alt=""><p>Pequeños detalles 🌹</p></div>
+    </div>
+    <button id="btnJuego3">💌 Desbloquear Siguiente</button>
+  </section>
+
+  <!-- 🎯 JUEGO 3 -->
+  <section id="juego3" class="juego bloqueada">
+    <h2>💌 Desafío 3: Palabra secreta</h2>
+    <p>¿Cuál es mi apodo favorito para ti? 🥰</p>
+    <input type="text" id="respuesta3" placeholder="Escribe aquí...">
+    <button id="comprobar3">Comprobar</button>
+    <p id="resultado3"></p>
+  </section>
+
+  <!-- 💌 Carta -->
+  <section id="carta" class="carta bloqueada">
+    <h2>Una Carta para Ti</h2>
+    <div class="letter-box">
+      <p id="letter"></p>
+      <button id="btnCarta">Leer Carta</button>
+    </div>
+    <button id="btnJuego4">💫 Último Desafío</button>
+  </section>
+
+  <!-- 🎯 JUEGO 4 -->
+  <section id="juego4" class="juego bloqueada">
+    <h2>🌠 Desafío final</h2>
+    <p>Haz clic en todos los corazones que aparecen antes de que desaparezcan 💖</p>
+    <div id="corazonesArea"></div>
+    <p id="resultado4"></p>
+  </section>
+
+  <!-- 💕 Galería -->
+  <section id="galeria" class="galeria bloqueada">
+    <h2>Galería de Recuerdos</h2>
+    <div class="galeria-slider">
+      <img src="img/foto1.jpg" alt="Recuerdo 1">
+      <img src="img/foto2.jpg" alt="Recuerdo 2">
+      <img src="img/foto3.jpg" alt="Recuerdo 3">
+    </div>
+    <p>✨ Has completado todos los desafíos. Gracias por ser parte de mi historia. ❤️</p>
+  </section>
+
+  <!-- 🎵 Música -->
+  <audio id="bgMusic" src="music.mp3" loop></audio>
+  <button id="musicBtn">🎶</button>
+
+  <!-- 🌙 Modo oscuro -->
+  <button id="darkModeToggle">🌙</button>
+
+  <!-- 🌹 Footer -->
+  <footer>
+    <p>Hecho con amor por papi Fran.</p>
+  </footer>
+
+</body>
+</html>
